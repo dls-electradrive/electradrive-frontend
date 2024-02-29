@@ -1,28 +1,42 @@
 import { Grid, GridItem, Show } from "@chakra-ui/react";
 import "./App.css";
 import NavBar from "./components/Navbar";
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom"
+import Home from "./pages/HomePage"
+import Inventory from "./pages/InventoryPage"
+import Layout from "./components/Layout"
+import Build from "./pages/BuildPage"
+import Page404 from "./pages/Page404"
 
 function App() {
+  const router = createBrowserRouter([
+    {
+      element: <Layout />,
+      errorElement: <Page404 />, //OBS error siden har sin header kaldt direkte i pages/Page404. Da vi ikke bruger layout til at loade siden.
+      children: [
+        {
+          path: "/",
+          element: <Home />,
+        },
+        // other pages....
+        {
+          path: "/inventory",
+          element: <Inventory />,
+        },
+        {
+          path: "/build",
+          element: <Build />,
+        },
+      ],
+    },
+  ])
+
   return (
-    <Grid
-      templateAreas={{
-        base: `"nav" "main"`,
-        lg: `"nav nav" "aside main"`,
-      }}
-    >
-      <GridItem bg="orange.300" gridArea={"nav"}>
-        <NavBar />
-      </GridItem>
-      <Show above="lg">
-        <GridItem bg="pink.300" gridArea={"aside"}>
-          Aside
-        </GridItem>
-      </Show>
-      <GridItem bg="green.300" gridArea={"main"}>
-        Main
-      </GridItem>
-    </Grid>
-  );
+      <RouterProvider router={router} />
+  )
 }
 
 export default App;
