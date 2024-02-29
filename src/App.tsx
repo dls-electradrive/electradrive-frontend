@@ -1,27 +1,21 @@
 import { Grid, GridItem, Show } from "@chakra-ui/react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import NavBar from "./components/Navbar";
+import CustomCarPage from "./Pages/CustomCarPage/CustomCarPage";
+import HomePage from "./Pages/HomePage/HomePage";
+import LagerPage from "./Pages/LagerPage/LagerPage";
 
 function App() {
   return (
-    <Grid
-      templateAreas={{
-        base: `"nav" "main"`,
-        lg: `"nav nav" "aside main"`,
-      }}
-    >
-      <GridItem bg="orange.300" gridArea={"nav"}>
-        <NavBar />
-      </GridItem>
-      <Show above="lg">
-        <GridItem bg="pink.300" gridArea={"aside"}>
-          Aside
-        </GridItem>
-      </Show>
-      <GridItem bg="green.300" gridArea={"main"}>
-        Main
-      </GridItem>
-    </Grid>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<NavBar />} />
+        <Route index element={<HomePage />} />
+        <Route path="lager" element={<LagerPage />} />
+        <Route path="customcar" element={<CustomCarPage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
