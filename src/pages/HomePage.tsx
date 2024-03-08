@@ -12,7 +12,8 @@ export default function Layout() {
                     </Heading>
                     <Text fontSize="xl" mb={8}>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                        tincidunt, nunc id aliquam lacinia, nisl justo tincidunt nunc, id
+                        tincidunt, nunc id aliquam lacinia,
+                         nisl justo tincidunt nunc, id
                         consectetur nunc nunc id aliquam lacinia, nisl justo tincidunt
                         nunc, id consectetur nunc
                     </Text>
