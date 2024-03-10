@@ -1,0 +1,137 @@
+[
+  {
+    "id": 1,
+    "name": "SUV White",
+    "type": "suv",
+    "color": "white",
+    "battery": "75%",
+    "wheels": "4",
+    "background_image": "suvwhite"
+  },
+  {
+    "id": 2,
+    "name": "Sportscar Red",
+    "type": "sportscar",
+    "color": "red",
+    "battery": "80%",
+    "wheels": "4",
+    "background_image": "sportscarred"
+  },
+  {
+    "id": 3,
+    "name": "SUV Blue",
+    "type": "suv",
+    "color": "blue",
+    "battery": "60%",
+    "wheels": "4",
+    "background_image": "suvblue"
+  },
+  {
+    "id": 4,
+    "name": "Sportscar Black",
+    "type": "sportscar",
+    "color": "black",
+    "battery": "90%",
+    "wheels": "4",
+    "background_image": "sportscarblack"
+  },
+  {
+    "id": 5,
+    "name": "SUV Red",
+    "type": "suv",
+    "color": "red",
+    "battery": "70%",
+    "wheels": "4",
+    "background_image": "suvred"
+  },
+  {
+    "id": 6,
+    "name": "Sportscar White",
+    "type": "sportscar",
+    "color": "white",
+    "battery": "85%",
+    "wheels": "4",
+    "background_image": "sportscarwhite"
+  },
+  {
+    "id": 7,
+    "name": "SUV Black",
+    "type": "suv",
+    "color": "black",
+    "battery": "65%",
+    "wheels": "4",
+    "background_image": "suvblack"
+  },
+  {
+    "id": 8,
+    "name": "Sportscar Blue",
+    "type": "sportscar",
+    "color": "blue",
+    "battery": "95%",
+    "wheels": "4",
+    "background_image": "sportscarblue"
+  },
+  {
+    "id": 9,
+    "name": "SUV White",
+    "type": "suv",
+    "color": "white",
+    "battery": "75%",
+    "wheels": "4",
+    "background_image": "suvwhite"
+  },
+  {
+    "id": 10,
+    "name": "Sportscar Red",
+    "type": "sportscar",
+    "color": "red",
+    "battery": "80%",
+    "wheels": "4",
+    "background_image": "sportscarred"
+  },
+  {
+    "id": 11,
+    "name": "SUV Blue",
+    "type": "suv",
+    "color": "blue",
+    "battery": "60%",
+    "wheels": "4",
+    "background_image": "suvblue"
+  },
+  {
+    "id": 12,
+    "name": "Sportscar Black",
+    "type": "sportscar",
+    "color": "black",
+    "battery": "90%",
+    "wheels": "4",
+    "background_image": "sportscarblack"
+  },
+  {
+    "id": 13,
+    "name": "SUV Red",
+    "type": "suv",
+    "color": "red",
+    "battery": "70%",
+    "wheels": "4",
+    "background_image": "suvred"
+  },
+  {
+    "id": 14,
+    "name": "Sportscar White",
+    "type": "sportscar",
+    "color": "white",
+    "battery": "85%",
+    "wheels": "4",
+    "background_image": "sportscarwhite"
+  },
+  {
+    "id": 15,
+    "name": "SUV Black",
+    "type": "suv",
+    "color": "black",
+    "battery": "65%",
+    "wheels": "4",
+    "background_image": "suvblack"
+  }
+]

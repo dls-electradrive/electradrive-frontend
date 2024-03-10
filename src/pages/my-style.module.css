@@ -1,0 +1,39 @@
+
+.imagecontainer {
+  background-position: bottom;
+  background-size: fill;
+  background-repeat: no-repeat;
+}
+
+.showtitle {
+  color: white;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: black;
+}
+
+
+.centertitlandextra{
+  
+  color: white;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: black;
+  margin-top: -180px;
+}
+
+
+.drawnborder{
+  border-style: solid;
+}
+
+
+.muchpadding{
+  padding: 20px;
+}
+
+.slightpadding{
+  padding-bottom: 15px;
+}
+
+.slightpaddingtop{
+  padding-top: 30px;
+}
