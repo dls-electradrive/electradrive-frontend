@@ -4,8 +4,8 @@
     "name": "SUV White",
     "type": "suv",
     "color": "white",
-    "battery": "75%",
-    "wheels": "4",
+    "battery": "50kW",
+    "hitch": true,
     "background_image": "suvwhite"
   },
   {
@@ -13,8 +13,8 @@
     "name": "Sportscar Red",
     "type": "sportscar",
     "color": "red",
-    "battery": "80%",
-    "wheels": "4",
+    "battery": "75kW",
+    "hitch": false,
     "background_image": "sportscarred"
   },
   {
@@ -22,8 +22,8 @@
     "name": "SUV Blue",
     "type": "suv",
     "color": "blue",
-    "battery": "60%",
-    "wheels": "4",
+    "battery": "50kW",
+    "hitch": true,
     "background_image": "suvblue"
   },
   {
@@ -31,8 +31,8 @@
     "name": "Sportscar Black",
     "type": "sportscar",
     "color": "black",
-    "battery": "90%",
-    "wheels": "4",
+    "battery": "75kW",
+    "hitch": false,
     "background_image": "sportscarblack"
   },
   {
@@ -40,8 +40,8 @@
     "name": "SUV Red",
     "type": "suv",
     "color": "red",
-    "battery": "70%",
-    "wheels": "4",
+    "battery": "50kW",
+    "hitch": true,
     "background_image": "suvred"
   },
   {
@@ -49,8 +49,8 @@
     "name": "Sportscar White",
     "type": "sportscar",
     "color": "white",
-    "battery": "85%",
-    "wheels": "4",
+    "battery": "75kW",
+    "hitch": false,
     "background_image": "sportscarwhite"
   },
   {
@@ -58,8 +58,8 @@
     "name": "SUV Black",
     "type": "suv",
     "color": "black",
-    "battery": "65%",
-    "wheels": "4",
+    "battery": "50kW",
+    "hitch": true,
     "background_image": "suvblack"
   },
   {
@@ -67,8 +67,8 @@
     "name": "Sportscar Blue",
     "type": "sportscar",
     "color": "blue",
-    "battery": "95%",
-    "wheels": "4",
+    "battery": "75kW",
+    "hitch": false,
     "background_image": "sportscarblue"
   },
   {
@@ -76,8 +76,8 @@
     "name": "SUV White",
     "type": "suv",
     "color": "white",
-    "battery": "75%",
-    "wheels": "4",
+    "battery": "50kW",
+    "hitch": true,
     "background_image": "suvwhite"
   },
   {
@@ -85,8 +85,8 @@
     "name": "Sportscar Red",
     "type": "sportscar",
     "color": "red",
-    "battery": "80%",
-    "wheels": "4",
+    "battery": "75kW",
+    "hitch": false,
     "background_image": "sportscarred"
   },
   {
@@ -94,8 +94,8 @@
     "name": "SUV Blue",
     "type": "suv",
     "color": "blue",
-    "battery": "60%",
-    "wheels": "4",
+    "battery": "50kW",
+    "hitch": true,
     "background_image": "suvblue"
   },
   {
@@ -103,8 +103,8 @@
     "name": "Sportscar Black",
     "type": "sportscar",
     "color": "black",
-    "battery": "90%",
-    "wheels": "4",
+    "battery": "75kW",
+    "hitch": false,
     "background_image": "sportscarblack"
   },
   {
@@ -112,8 +112,8 @@
     "name": "SUV Red",
     "type": "suv",
     "color": "red",
-    "battery": "70%",
-    "wheels": "4",
+    "battery": "50kW",
+    "hitch": true,
     "background_image": "suvred"
   },
   {
@@ -121,8 +121,8 @@
     "name": "Sportscar White",
     "type": "sportscar",
     "color": "white",
-    "battery": "85%",
-    "wheels": "4",
+    "battery": "75kW",
+    "hitch": false,
     "background_image": "sportscarwhite"
   },
   {
@@ -130,8 +130,8 @@
     "name": "SUV Black",
     "type": "suv",
     "color": "black",
-    "battery": "65%",
-    "wheels": "4",
+    "battery": "50kW",
+    "hitch": true,
     "background_image": "suvblack"
   }
 ]
