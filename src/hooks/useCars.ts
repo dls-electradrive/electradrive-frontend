@@ -7,7 +7,7 @@ export interface Car {
   type: string;
   color: string;
   battery: string;
-  wheels: string;
+  hitch: boolean;
   background_image: string;
 }
 

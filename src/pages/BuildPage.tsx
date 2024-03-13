@@ -54,7 +54,7 @@ export default function Layout() {
                             </Center>
                         </Box>
                         <Box  flex="1" bg={"red.400"} marginRight={"50"}>
-                            <FormControl color={"white"}>
+                            <FormControl color={"black"}>
                             <Heading as="h1" size="md" mb={4} textAlign="center">
                                  Design your Car.
                                 
@@ -80,10 +80,10 @@ export default function Layout() {
                                     <option value="smallbattery">50kW</option>
                                     <option value="largeattery">70kW</option>
                                 </Select>
-                                <FormLabel textAlign="center">Select wheel size</FormLabel>
-                                <Select title="Wheel">
-                                    <option value="wheel19">19"</option>
-                                    <option value="wheel21">21"</option>
+                                <FormLabel textAlign="center">Trailer hitch</FormLabel>
+                                <Select title="Hitch">
+                                    <option value="wheel19">No</option>
+                                    <option value="wheel21">Yes</option>
                                 </Select>
                             </FormControl>
                             <Box textAlign="center" className={styles.slightpaddingtop}>
