@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import myCarsData from "./mycars.json";
 
 export interface Car {
   id: number;
@@ -25,7 +24,7 @@ const useCars = () => {
 
       fetchData();
     } catch (error) {
-      setError(error.message);
+      setError("Error fetching data");
     }
   }, []);
 

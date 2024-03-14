@@ -73,14 +73,14 @@ const CarCard = ({ car }: Props) => {
               <Text>
                 This model {car.hitch ? 'comes with' : 'does not come with'} a trailer hitch.
               </Text>
-
+{/*                   
               <FormControl color={"black"}>
                 <Heading as="h1" size="md" mb={4} textAlign="center">
                   Design your Car.
 
                   <Heading as="h1" size="md" mb={4} textAlign="center">
 
-                    ____________
+                ____________
                   </Heading>
                 </Heading>
                 <FormLabel textAlign="center">Select car type</FormLabel>
@@ -106,7 +106,7 @@ const CarCard = ({ car }: Props) => {
                   <option value="wheel21">Yes</option>
                 </Select>
               </FormControl>
-
+ */}
             </ModalBody>
 
             <ModalFooter>
