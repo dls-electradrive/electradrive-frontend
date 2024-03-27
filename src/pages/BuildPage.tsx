@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Outlet } from "react-router-dom";
 import { Box, Container, Flex, Heading, Image, FormControl, FormLabel, FormErrorMessage, FormHelperText, Select, AbsoluteCenter, Button, Input } from "@chakra-ui/react";
 import { Center, Square, Circle } from '@chakra-ui/react'
-import styles from './my-style.module.css';
+import styles from '../my-style.module.css';
 
 export default function Layout() {
     const [car, setCar] = useState("suv");
@@ -57,12 +57,12 @@ export default function Layout() {
                         <FormControl color={"black"}>
                             <Heading as="h1" size="md" mb={4} textAlign="center">
                                 Design your Car.
-
-                                <Heading as="h1" size="md" mb={4} textAlign="center" className={styles.slightpadding}>
-
-                                    ____________
-                                </Heading>
                             </Heading>
+                            <Heading as="h1" size="md" mb={4} textAlign="center" className={styles.slightpadding}>
+
+                                ____________
+                            </Heading>
+
                             <FormLabel textAlign="center">Select car type</FormLabel>
                             <Select title="Car" onChange={handleCarChange} value={car}>
                                 <option value="suv">Suv</option>
@@ -87,12 +87,12 @@ export default function Layout() {
                             </Select>
                             <Heading className={styles.slightpaddingtop} as="h1" size="md" mb={4} textAlign="center" >
                                 Delivery and payment info.
-
-                                <Heading as="h1" size="md" mb={4} textAlign="center" >
-
-                                    ____________
-                                </Heading>
                             </Heading>
+                            <Heading as="h1" size="md" mb={4} textAlign="center" >
+
+                                ____________
+                            </Heading>
+
 
                             <FormLabel textAlign="center">Full name</FormLabel>
                             <Input type='name' />
