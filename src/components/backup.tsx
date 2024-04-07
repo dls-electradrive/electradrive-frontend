@@ -2,14 +2,9 @@ import { useState } from 'react';
 import { FormControl, FormLabel, Heading, Input, Select, Button, useToast } from "@chakra-ui/react";
 import styles from '../my-style.module.css';
 
-interface BuildFormProps {
-  car: string;
-  color: string;
-  setCar: (car: string) => void;
-  setColor: (color: string) => void;
-}
-
-const BuildForm: React.FC<BuildFormProps> = ({ car, color, setCar, setColor }) => {
+const BuildForm = () => {
+  const [car, setCar] = useState("");
+  const [color, setColor] = useState("");
   const [battery, setBattery] = useState("");
   const [hitch, setHitch] = useState("");
   const [name, setName] = useState("");
@@ -70,11 +65,12 @@ const BuildForm: React.FC<BuildFormProps> = ({ car, color, setCar, setColor }) =
   return (
     <form onSubmit={handleSubmit}>
       <FormControl color={"black"}>
+
         <Heading as="h1" size="md" mb={4} textAlign="center">
           Design your Car.
-          </Heading>
           <Heading as="h1" size="md" mb={4} textAlign="center" className={styles.slightpadding}>
             ____________
+          </Heading>
         </Heading>
         <FormLabel textAlign="center">Select car type</FormLabel>
         <Select title="Car" onChange={e => setCar(e.target.value)} value={car}>
@@ -100,10 +96,9 @@ const BuildForm: React.FC<BuildFormProps> = ({ car, color, setCar, setColor }) =
         </Select>
         <Heading className={styles.slightpaddingtop} as="h1" size="md" mb={4} textAlign="center">
           Delivery and payment info.
-          </Heading>
           <Heading as="h1" size="md" mb={4} textAlign="center">
             ____________
-          
+          </Heading>
         </Heading>
         <FormLabel textAlign="center">Full name</FormLabel>
         <Input type='name' onChange={e => setName(e.target.value)} />

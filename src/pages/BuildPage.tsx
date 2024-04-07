@@ -3,6 +3,7 @@ import { Outlet } from "react-router-dom";
 import { Box, Container, Flex, Heading, Image, FormControl, FormLabel, FormErrorMessage, FormHelperText, Select, AbsoluteCenter, Button, Input } from "@chakra-ui/react";
 import { Center, Square, Circle } from '@chakra-ui/react'
 import styles from '../my-style.module.css';
+import BuildForm from "../components/BuildForm";
 
 export default function Layout() {
     const [car, setCar] = useState("suv");
@@ -54,60 +55,9 @@ export default function Layout() {
                         </Center>
                     </Box>
                     <Box flex="1" bg={"red.400"} marginRight={"50"}>
-                        <FormControl color={"black"}>
-                            <Heading as="h1" size="md" mb={4} textAlign="center">
-                                Design your Car.
-                            </Heading>
-                            <Heading as="h1" size="md" mb={4} textAlign="center" className={styles.slightpadding}>
+                        <Box flex="1" bg={"red.400"} marginRight={"50"}>
 
-                                ____________
-                            </Heading>
-
-                            <FormLabel textAlign="center">Select car type</FormLabel>
-                            <Select title="Car" onChange={handleCarChange} value={car}>
-                                <option value="suv">Suv</option>
-                                <option value="sportscar">Sportscar</option>
-                            </Select>
-                            <FormLabel textAlign="center">Select color</FormLabel>
-                            <Select title="Color" onChange={handleColorChange} value={color}>
-                                <option value="white">White</option>
-                                <option value="black">Black</option>
-                                <option value="red">Red</option>
-                                <option value="blue">Blue</option>
-                            </Select>
-                            <FormLabel textAlign="center">Select battery size</FormLabel>
-                            <Select title="Battery">
-                                <option value="smallbattery">50kW</option>
-                                <option value="largeattery">70kW</option>
-                            </Select>
-                            <FormLabel textAlign="center" >Trailer hitch</FormLabel>
-                            <Select title="Hitch" >
-                                <option value="wheel19">No</option>
-                                <option value="wheel21">Yes</option>
-                            </Select>
-                            <Heading className={styles.slightpaddingtop} as="h1" size="md" mb={4} textAlign="center" >
-                                Delivery and payment info.
-                            </Heading>
-                            <Heading as="h1" size="md" mb={4} textAlign="center" >
-
-                                ____________
-                            </Heading>
-
-
-                            <FormLabel textAlign="center">Full name</FormLabel>
-                            <Input type='name' />
-
-                            <FormLabel textAlign="center">Email address</FormLabel>
-                            <Input type='email' />
-
-                            <FormLabel textAlign="center">Delivery address</FormLabel>
-                            <Input type='adress' />
-
-                        </FormControl>
-                        <Box textAlign="center" className={styles.slightpaddingtop}>
-                            <Button colorScheme='pink' variant='solid' >
-                                Click here to purchase!
-                            </Button>
+                            <BuildForm car={car} color={color} setCar={setCar} setColor={setColor} />
                         </Box>
                     </Box>
 
