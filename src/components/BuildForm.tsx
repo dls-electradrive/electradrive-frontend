@@ -1,6 +1,8 @@
 import { useState } from 'react';
-import { FormControl, FormLabel, Heading, Input, Select, Button, useToast } from "@chakra-ui/react";
+import { FormControl, FormLabel, Heading, Input, Select, Button, useToast, Center } from "@chakra-ui/react";
 import styles from '../my-style.module.css';
+import { v4 as uuidv4 } from 'uuid';
+
 
 interface BuildFormProps {
   car: string;
@@ -10,8 +12,8 @@ interface BuildFormProps {
 }
 
 const BuildForm: React.FC<BuildFormProps> = ({ car, color, setCar, setColor }) => {
-  const [battery, setBattery] = useState("");
-  const [hitch, setHitch] = useState("");
+  const [battery, setBattery] = useState("smallbattery");
+  const [hitch, setHitch] = useState("false");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [address, setAddress] = useState("");
@@ -20,6 +22,7 @@ const BuildForm: React.FC<BuildFormProps> = ({ car, color, setCar, setColor }) =
 
   const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
+    console.log({ car, color, battery, hitch, name, email, address });
 
     if (!car || !color || !battery || !hitch || !name || !email || !address) {
       toast({
@@ -33,6 +36,26 @@ const BuildForm: React.FC<BuildFormProps> = ({ car, color, setCar, setColor }) =
     }
 
     setIsLoading(true);
+  
+    const customerUUID = uuidv4();
+    const carUUID = uuidv4();
+
+    const payload = {
+      customerInfo: {
+        id: customerUUID, // Assign UUID to the customer
+        name,
+        email,
+        address,
+      },
+      carDetails: {
+        id: carUUID, // Assign UUID to the car
+        type: car,
+        color,
+        battery,
+        hitch: hitch === "hitchtrue",
+      },
+    };
+    console.log(payload);
 
     try {
       const response = await fetch("/api/submit", {
@@ -40,7 +63,7 @@ const BuildForm: React.FC<BuildFormProps> = ({ car, color, setCar, setColor }) =
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ name, email, address, car, color, battery, hitch }),
+        body: JSON.stringify(payload),
       });
 
       const data = await response.json();
@@ -95,8 +118,8 @@ const BuildForm: React.FC<BuildFormProps> = ({ car, color, setCar, setColor }) =
         </Select>
         <FormLabel textAlign="center">Trailer hitch</FormLabel>
         <Select title="Hitch" onChange={e => setHitch(e.target.value)}>
-          <option value="wheel19">No</option>
-          <option value="wheel21">Yes</option>
+          <option value="false">No</option>
+          <option value="true">Yes</option>
         </Select>
         <Heading className={styles.slightpaddingtop} as="h1" size="md" mb={4} textAlign="center">
           Delivery and payment info.
@@ -106,13 +129,16 @@ const BuildForm: React.FC<BuildFormProps> = ({ car, color, setCar, setColor }) =
           
         </Heading>
         <FormLabel textAlign="center">Full name</FormLabel>
-        <Input type='name' onChange={e => setName(e.target.value)} />
+        <Input type='name' onChange={e => setName(e.target.value)} isRequired />
         <FormLabel textAlign="center">Email address</FormLabel>
-        <Input type='email' onChange={e => setEmail(e.target.value)} />
+        <Input type='email' onChange={e => setEmail(e.target.value)} isRequired />
         <FormLabel textAlign="center">Delivery address</FormLabel>
-        <Input type='address' onChange={e => setAddress(e.target.value)} />
+        <Input type='address' onChange={e => setAddress(e.target.value)} isRequired />
+        <Center>
+        <Button type="submit" isLoading={isLoading}>Submit</Button>
+        </Center>
       </FormControl>
-      <Button type="submit" isLoading={isLoading}>Submit</Button>
+      
     </form>
   );
 };
