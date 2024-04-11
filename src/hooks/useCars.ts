@@ -12,23 +12,46 @@ export interface Car {
 
 const useCars = () => {
   const [cars, setCars] = useState<Car[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState("");
 
   useEffect(() => {
-    try {
-      const fetchData = async () => {
+    const fetchData = async () => {
+      try {
+        setIsLoading(true);
         const response = await fetch("/mycars.json");
         const data = await response.json();
         setCars(data);
-      };
+        setIsLoading(false);
+      } catch (error) {
+        setError("Error fetching data");
+        setIsLoading(false);
+      }
+    };
 
-      fetchData();
-    } catch (error) {
-      setError("Error fetching data");
-    }
+  {/* Brug hvis skeletons skal observeres!
+    useEffect(() => {
+    const fetchData = async () => {
+      try {
+        setIsLoading(true);
+        const response = await fetch("/mycars.json");
+        const data = await response.json();
+
+        setTimeout(() => {
+          setCars(data);
+          setIsLoading(false);
+        }, 5000); // delay of 5 seconds
+      } catch (error) {
+        setError("Error fetching data");
+        setIsLoading(false);
+      }
+    }; */}
+    
+
+    fetchData();
   }, []);
 
-  return { cars, error };
+  return { cars, isLoading, error };
 };
 
 export default useCars;

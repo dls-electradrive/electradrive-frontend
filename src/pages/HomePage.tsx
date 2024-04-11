@@ -1,6 +1,6 @@
 import { Box, Container, GridItem, Heading, SimpleGrid, Text, Image, Button } from "@chakra-ui/react";
 import { Outlet } from "react-router-dom";
-import styles from './my-style.module.css';
+import styles from '../my-style.module.css';
 import PathConstants from '../routes/PathConstants';
 import { Link as RouterLink } from 'react-router-dom';
 import { Link as ChakraLink, LinkProps } from '@chakra-ui/react'
