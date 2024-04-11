@@ -1,0 +1,1 @@
+Husk at der skal sættes environment variabel for base url.

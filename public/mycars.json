@@ -1,6 +1,6 @@
 [
   {
-    "id": 1,
+    "id": "c071c2b2-48d6-4d53-b38e-590b2e93e33f",
     "name": "SUV White",
     "type": "suv",
     "color": "white",
@@ -9,7 +9,7 @@
     "background_image": "suvwhite"
   },
   {
-    "id": 2,
+    "id": "e6517b80-6a23-4f7b-8cf3-7d30c9f82c1e",
     "name": "Sportscar Red",
     "type": "sportscar",
     "color": "red",
@@ -18,7 +18,7 @@
     "background_image": "sportscarred"
   },
   {
-    "id": 3,
+    "id": "74b932ae-2f4f-45b0-9f30-9a8e621d48d6",
     "name": "SUV Blue",
     "type": "suv",
     "color": "blue",
@@ -27,7 +27,7 @@
     "background_image": "suvblue"
   },
   {
-    "id": 4,
+    "id": "5f3f16bb-16c7-422e-98d7-1096d0d8a005",
     "name": "Sportscar Black",
     "type": "sportscar",
     "color": "black",
@@ -36,7 +36,7 @@
     "background_image": "sportscarblack"
   },
   {
-    "id": 5,
+    "id": "e275ad76-dcc7-47a2-bf68-d023fa574a5a",
     "name": "SUV Red",
     "type": "suv",
     "color": "red",
@@ -45,7 +45,7 @@
     "background_image": "suvred"
   },
   {
-    "id": 6,
+    "id": "e0de939e-dc2f-4bfb-b0cf-0b8c579b3155",
     "name": "Sportscar White",
     "type": "sportscar",
     "color": "white",
@@ -54,7 +54,7 @@
     "background_image": "sportscarwhite"
   },
   {
-    "id": 7,
+    "id": "07db3195-24b1-42cb-bf9f-30f9cc556edf",
     "name": "SUV Black",
     "type": "suv",
     "color": "black",
@@ -63,7 +63,7 @@
     "background_image": "suvblack"
   },
   {
-    "id": 8,
+    "id": "a0270300-0fa8-4a15-a508-15042450a800",
     "name": "Sportscar Blue",
     "type": "sportscar",
     "color": "blue",
@@ -72,7 +72,7 @@
     "background_image": "sportscarblue"
   },
   {
-    "id": 9,
+    "id": "e06f34c1-7a39-4d4f-b71c-35e32b5894ed",
     "name": "SUV White",
     "type": "suv",
     "color": "white",
@@ -81,7 +81,7 @@
     "background_image": "suvwhite"
   },
   {
-    "id": 10,
+    "id": "fa6be2b6-d21f-44c5-8b0f-0f568f303c8d",
     "name": "Sportscar Red",
     "type": "sportscar",
     "color": "red",
@@ -90,7 +90,7 @@
     "background_image": "sportscarred"
   },
   {
-    "id": 11,
+    "id": "3f5650e7-049a-458e-a2e4-8b9a12c7d21e",
     "name": "SUV Blue",
     "type": "suv",
     "color": "blue",
@@ -99,7 +99,7 @@
     "background_image": "suvblue"
   },
   {
-    "id": 12,
+    "id": "f1fd0133-8d41-4b76-82ee-2b124c3a10ff",
     "name": "Sportscar Black",
     "type": "sportscar",
     "color": "black",
@@ -108,7 +108,7 @@
     "background_image": "sportscarblack"
   },
   {
-    "id": 13,
+    "id": "25051539-781d-4908-84b8-f4e4997a0ba0",
     "name": "SUV Red",
     "type": "suv",
     "color": "red",
@@ -117,7 +117,7 @@
     "background_image": "suvred"
   },
   {
-    "id": 14,
+    "id": "1b3de74e-58e3-4f0e-9484-090c42cbb241",
     "name": "Sportscar White",
     "type": "sportscar",
     "color": "white",
@@ -126,7 +126,7 @@
     "background_image": "sportscarwhite"
   },
   {
-    "id": 15,
+    "id": "746e74c5-1f1d-4cd7-81e2-30d0f6413c50",
     "name": "SUV Black",
     "type": "suv",
     "color": "black",

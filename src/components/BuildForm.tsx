@@ -41,24 +41,20 @@ const BuildForm: React.FC<BuildFormProps> = ({ car, color, setCar, setColor }) =
     const carUUID = uuidv4();
 
     const payload = {
-      customerInfo: {
-        id: customerUUID, // Assign UUID to the customer
-        name,
-        email,
-        address,
-      },
-      carDetails: {
-        id: carUUID, // Assign UUID to the car
-        type: car,
-        color,
-        battery,
-        hitch: hitch === "hitchtrue",
-      },
+        customerId: customerUUID, // Assign UUID to the customer
+        customerName: name,
+        customerEmail: email,
+        customerAddress: address,
+        carId: carUUID, // Assign UUID to the car
+        carType: car,
+        carColor: color,
+        carBattery: battery,
+        carHitch: hitch,
     };
     console.log(payload);
 
     try {
-      const response = await fetch("/api/submit", {
+      const response = await fetch("http://localhost:8080/api/sales/submit", {
         method: "POST",
         headers: {
           'Content-Type': 'application/json',
@@ -66,16 +62,21 @@ const BuildForm: React.FC<BuildFormProps> = ({ car, color, setCar, setColor }) =
         body: JSON.stringify(payload),
       });
 
-      const data = await response.json();
-      console.log(data);
 
-      toast({
-        title: "Success.",
-        description: "Your information has been submitted.",
-        status: "success",
-        duration: 5000,
-        isClosable: true,
-      });
+
+      if (response.ok) {
+        // If the HTTP status code is 2xx, it was successful
+        toast({
+          title: "Success.",
+          description: "Your information has been submitted.",
+          status: "success",
+          duration: 5000,
+          isClosable: true,
+        });
+      } else {
+        // If the HTTP status code is not 2xx, throw an error
+        throw new Error('Network response was not ok.');
+      }
     } catch (error) {
       console.error(error);
       toast({

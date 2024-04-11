@@ -35,26 +35,23 @@ const InventoryForm = ({ car }: Props) => {
 
     const customerUUID = uuidv4();
     
+
     const payload = {
-      customerInfo: {
-        id: customerUUID, 
-        name,
-        email,
-        address,
-      },
-      carDetails: {
-        carId: car.id,
-        type: car.type,
-        color: car.color,
-        battery: car.battery,
-        hitch: car.hitch,
-      },
-    };
+      customerId: customerUUID, // Assign UUID to the customer
+      customerName: name,
+      customerEmail: email,
+      customerAddress: address,
+      carId: car.id, // Assign UUID to the car
+      carType: car.type,
+      carColor: car.color,
+      carBattery: car.battery,
+      carHitch: car.hitch,
+  };
 
     console.log(payload);
     
     try {
-      const response = await fetch('/api/delivery', { // Adjust the URL as necessary
+      const response = await fetch('http://localhost:8080/api/sales/submit', { // Adjust the URL as necessary
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -62,16 +59,20 @@ const InventoryForm = ({ car }: Props) => {
         body: JSON.stringify(payload),
       });
 
-      const data = await response.json();
-      console.log(data);
 
-      toast({
-        title: "Success.",
-        description: "Your information has been submitted.",
-        status: "success",
-        duration: 5000,
-        isClosable: true,
-      });
+      if (response.ok) {
+        // If the HTTP status code is 2xx, it was successful
+        toast({
+          title: "Success.",
+          description: "Your information has been submitted.",
+          status: "success",
+          duration: 5000,
+          isClosable: true,
+        });
+      } else {
+        // If the HTTP status code is not 2xx, throw an error
+        throw new Error('Network response was not ok.');
+      }
     } catch (error) {
       console.error(error);
       toast({
