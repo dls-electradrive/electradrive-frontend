@@ -36,10 +36,10 @@ const CarCard = ({ car }: Props) => {
         </Stack>
       </CardBody>
       <Image
-        src={`/${car.background_image}.jpg`}
+        src={`/${car.type}${car.color}.jpg`}
         overflow="hidden"
         borderRadius="40"
-        pt={car.background_image.includes('sportscar') ? '8' : undefined}
+        pt={car.type.includes('sportscar') ? '8' : undefined}
       ></Image>
       <CardBody>
         <Text color='blue.600' fontSize='2xl'>

@@ -7,7 +7,6 @@ export interface Car {
   color: string;
   battery: string;
   hitch: boolean;
-  background_image: string;
 }
 
 const useCars = () => {

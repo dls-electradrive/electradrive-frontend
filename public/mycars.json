@@ -5,8 +5,7 @@
     "type": "suv",
     "color": "white",
     "battery": "50kW",
-    "hitch": true,
-    "background_image": "suvwhite"
+    "hitch": true
   },
   {
     "id": "e6517b80-6a23-4f7b-8cf3-7d30c9f82c1e",
@@ -14,8 +13,7 @@
     "type": "sportscar",
     "color": "red",
     "battery": "75kW",
-    "hitch": false,
-    "background_image": "sportscarred"
+    "hitch": false
   },
   {
     "id": "74b932ae-2f4f-45b0-9f30-9a8e621d48d6",
@@ -23,8 +21,7 @@
     "type": "suv",
     "color": "blue",
     "battery": "50kW",
-    "hitch": true,
-    "background_image": "suvblue"
+    "hitch": true
   },
   {
     "id": "5f3f16bb-16c7-422e-98d7-1096d0d8a005",
@@ -32,8 +29,7 @@
     "type": "sportscar",
     "color": "black",
     "battery": "75kW",
-    "hitch": false,
-    "background_image": "sportscarblack"
+    "hitch": false
   },
   {
     "id": "e275ad76-dcc7-47a2-bf68-d023fa574a5a",
@@ -41,8 +37,7 @@
     "type": "suv",
     "color": "red",
     "battery": "50kW",
-    "hitch": true,
-    "background_image": "suvred"
+    "hitch": true
   },
   {
     "id": "e0de939e-dc2f-4bfb-b0cf-0b8c579b3155",
@@ -50,8 +45,7 @@
     "type": "sportscar",
     "color": "white",
     "battery": "75kW",
-    "hitch": false,
-    "background_image": "sportscarwhite"
+    "hitch": false
   },
   {
     "id": "07db3195-24b1-42cb-bf9f-30f9cc556edf",
@@ -59,8 +53,7 @@
     "type": "suv",
     "color": "black",
     "battery": "50kW",
-    "hitch": true,
-    "background_image": "suvblack"
+    "hitch": true
   },
   {
     "id": "a0270300-0fa8-4a15-a508-15042450a800",
@@ -68,8 +61,7 @@
     "type": "sportscar",
     "color": "blue",
     "battery": "75kW",
-    "hitch": false,
-    "background_image": "sportscarblue"
+    "hitch": false
   },
   {
     "id": "e06f34c1-7a39-4d4f-b71c-35e32b5894ed",
@@ -77,8 +69,7 @@
     "type": "suv",
     "color": "white",
     "battery": "50kW",
-    "hitch": true,
-    "background_image": "suvwhite"
+    "hitch": true
   },
   {
     "id": "fa6be2b6-d21f-44c5-8b0f-0f568f303c8d",
@@ -86,8 +77,7 @@
     "type": "sportscar",
     "color": "red",
     "battery": "75kW",
-    "hitch": false,
-    "background_image": "sportscarred"
+    "hitch": false
   },
   {
     "id": "3f5650e7-049a-458e-a2e4-8b9a12c7d21e",
@@ -95,8 +85,7 @@
     "type": "suv",
     "color": "blue",
     "battery": "50kW",
-    "hitch": true,
-    "background_image": "suvblue"
+    "hitch": true
   },
   {
     "id": "f1fd0133-8d41-4b76-82ee-2b124c3a10ff",
@@ -104,8 +93,7 @@
     "type": "sportscar",
     "color": "black",
     "battery": "75kW",
-    "hitch": false,
-    "background_image": "sportscarblack"
+    "hitch": false
   },
   {
     "id": "25051539-781d-4908-84b8-f4e4997a0ba0",
@@ -113,8 +101,7 @@
     "type": "suv",
     "color": "red",
     "battery": "50kW",
-    "hitch": true,
-    "background_image": "suvred"
+    "hitch": true
   },
   {
     "id": "1b3de74e-58e3-4f0e-9484-090c42cbb241",
@@ -122,8 +109,7 @@
     "type": "sportscar",
     "color": "white",
     "battery": "75kW",
-    "hitch": false,
-    "background_image": "sportscarwhite"
+    "hitch": false
   },
   {
     "id": "746e74c5-1f1d-4cd7-81e2-30d0f6413c50",
@@ -131,7 +117,6 @@
     "type": "suv",
     "color": "black",
     "battery": "50kW",
-    "hitch": true,
-    "background_image": "suvblack"
+    "hitch": true
   }
 ]

@@ -21,7 +21,7 @@ const CarModal = ({ car, isOpen, onClose, finalRef }: Props) => {
         <ModalCloseButton />
         <ModalBody>
           <Image
-            src={`/${car.background_image}.jpg`}
+            src={`/${car.type}${car.color}.jpg`}
             overflow="hidden"
             borderRadius="40"
             paddingBottom={50}
