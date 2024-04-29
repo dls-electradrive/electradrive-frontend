@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { FormControl, FormLabel, Heading, Input, Select, Button, useToast, Center } from "@chakra-ui/react";
 import styles from '../my-style.module.css';
 import { v4 as uuidv4 } from 'uuid';
+import { useNavigate } from 'react-router-dom';
 
 
 interface BuildFormProps {
@@ -19,6 +20,8 @@ const BuildForm: React.FC<BuildFormProps> = ({ car, color, setCar, setColor }) =
   const [address, setAddress] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const toast = useToast();
+  const navigate = useNavigate(); 
+
 
   const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
@@ -66,13 +69,9 @@ const BuildForm: React.FC<BuildFormProps> = ({ car, color, setCar, setColor }) =
 
       if (response.ok) {
         // If the HTTP status code is 2xx, it was successful
-        toast({
-          title: "Success.",
-          description: "Your information has been submitted.",
-          status: "success",
-          duration: 5000,
-          isClosable: true,
-        });
+        // Redirection after a successful order
+        navigate('/order-confirmation', { state: { orderDetails: payload } });
+
       } else {
         // If the HTTP status code is not 2xx, throw an error
         throw new Error('Network response was not ok.');

@@ -1,3 +1,4 @@
+// App.tsx
 import { Grid, GridItem, Show } from "@chakra-ui/react";
 import "./App.css";
 import {
@@ -6,21 +7,21 @@ import {
 } from "react-router-dom"
 import Home from "./pages/HomePage"
 import Inventory from "./pages/InventoryPage"
-import Layout from "./components/Layout"
 import Build from "./pages/BuildPage"
+import OrderConfirmation from "./pages/OrderConfirmation" // Import the component
+import Layout from "./components/Layout"
 import Page404 from "./pages/Page404"
 
 function App() {
   const router = createBrowserRouter([
     {
       element: <Layout />,
-      errorElement: <Page404 />, //OBS error siden har sin header kaldt direkte i pages/Page404. Da vi ikke bruger layout til at loade siden.
+      errorElement: <Page404 />, // Handle errors with a 404 page
       children: [
         {
           path: "/",
           element: <Home />,
         },
-        // other pages....
         {
           path: "/inventory",
           element: <Inventory />,
@@ -28,6 +29,10 @@ function App() {
         {
           path: "/build",
           element: <Build />,
+        },
+        {
+          path: "/order-confirmation", // New route for the order confirmation page
+          element: <OrderConfirmation />,
         },
       ],
     },
