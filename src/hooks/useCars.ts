@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+const carUrl = import.meta.env.VITE_APP_BACKEND_GET_CAR_URL
 
 export interface Car {
   id: number;
@@ -18,7 +19,7 @@ const useCars = () => {
     const fetchData = async () => {
       try {
         setIsLoading(true);
-        const response = await fetch("127.0.0.1/api/car");
+        const response = await fetch(carUrl);
         const data = await response.json();
         setCars(data);
         setIsLoading(false);
