@@ -3,7 +3,7 @@ import { FormControl, FormLabel, Heading, Input, Select, Button, useToast, Cente
 import styles from '../my-style.module.css';
 import { v4 as uuidv4 } from 'uuid';
 import { useNavigate } from 'react-router-dom';
-
+const salesUrl = import.meta.env.VITE_BACKEND_SALE_URL
 
 interface BuildFormProps {
   car: string;
@@ -57,7 +57,7 @@ const BuildForm: React.FC<BuildFormProps> = ({ car, color, setCar, setColor }) =
     console.log(payload);
 
     try {
-      const response = await fetch("http://localhost:8080/api/sales/submit", {
+      const response = await fetch(salesUrl, {
         method: "POST",
         headers: {
           'Content-Type': 'application/json',

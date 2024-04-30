@@ -4,7 +4,7 @@ import styles from '../my-style.module.css';
 import { Car } from "../hooks/useCars"; // adjust the path as necessary
 import { v4 as uuidv4 } from 'uuid';
 import { useNavigate } from 'react-router-dom';
-
+const salesUrl = import.meta.env.VITE_BACKEND_SALE_URL
 
 interface Props {
   car: Car;
@@ -52,7 +52,7 @@ const InventoryForm = ({ car }: Props) => {
     console.log(payload);
     
     try {
-      const response = await fetch('http://localhost:8080/api/sales/submit', { // Adjust the URL as necessary
+      const response = await fetch(salesUrl, { // Adjust the URL as necessary
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
