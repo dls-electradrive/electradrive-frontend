@@ -18,7 +18,7 @@ const useCars = () => {
     const fetchData = async () => {
       try {
         setIsLoading(true);
-        const response = await fetch("/mycars.json");
+        const response = await fetch("127.0.0.1/api/car");
         const data = await response.json();
         setCars(data);
         setIsLoading(false);
@@ -54,3 +54,7 @@ const useCars = () => {
 };
 
 export default useCars;
+
+
+
+

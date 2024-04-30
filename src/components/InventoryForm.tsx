@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import styles from '../my-style.module.css';
 import { Car } from "../hooks/useCars"; // adjust the path as necessary
 import { v4 as uuidv4 } from 'uuid';
-
+import { useNavigate } from 'react-router-dom';
 
 
 interface Props {
@@ -16,6 +16,7 @@ const InventoryForm = ({ car }: Props) => {
   const [address, setAddress] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const toast = useToast();
+  const navigate = useNavigate(); 
 
   const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
@@ -62,13 +63,9 @@ const InventoryForm = ({ car }: Props) => {
 
       if (response.ok) {
         // If the HTTP status code is 2xx, it was successful
-        toast({
-          title: "Success.",
-          description: "Your information has been submitted.",
-          status: "success",
-          duration: 5000,
-          isClosable: true,
-        });
+        // Redirection after a successful order
+        navigate('/order-confirmation', { state: { orderDetails: payload } });
+
       } else {
         // If the HTTP status code is not 2xx, throw an error
         throw new Error('Network response was not ok.');
