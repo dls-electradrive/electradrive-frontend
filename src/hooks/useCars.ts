@@ -18,12 +18,14 @@ const useCars = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
+        console.error("Trying to fetch data from backend via useCars.ts");
         setIsLoading(true);
         const response = await fetch(carUrl);
         const data = await response.json();
         setCars(data);
         setIsLoading(false);
       } catch (error) {
+        console.error("Failed to fetch data from backend via useCars.ts");
         setError("Error fetching data");
         setIsLoading(false);
       }

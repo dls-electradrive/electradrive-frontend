@@ -57,6 +57,7 @@ const BuildForm: React.FC<BuildFormProps> = ({ car, color, setCar, setColor }) =
     console.log(payload);
 
     try {
+      console.log("Tries to send to backend via buildform");
       const response = await fetch(salesUrl, {
         method: "POST",
         headers: {
@@ -77,6 +78,7 @@ const BuildForm: React.FC<BuildFormProps> = ({ car, color, setCar, setColor }) =
         throw new Error('Network response was not ok.');
       }
     } catch (error) {
+      console.error("Failed to send to backend via buildform");
       console.error(error);
       toast({
         title: "An error occurred.",

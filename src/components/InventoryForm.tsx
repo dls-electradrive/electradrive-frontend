@@ -52,6 +52,7 @@ const InventoryForm = ({ car }: Props) => {
     console.log(payload);
     
     try {
+      console.log("Tries to send to backend via inventoryform");
       const response = await fetch(salesUrl, { // Adjust the URL as necessary
         method: 'POST',
         headers: {
@@ -71,6 +72,7 @@ const InventoryForm = ({ car }: Props) => {
         throw new Error('Network response was not ok.');
       }
     } catch (error) {
+      console.error("Failed to send to backend via inventoryform");
       console.error(error);
       toast({
         title: "An error occurred.",
