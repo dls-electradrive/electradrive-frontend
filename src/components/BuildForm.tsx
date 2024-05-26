@@ -62,7 +62,7 @@ const BuildForm: React.FC<BuildFormProps> = ({ car, color, setCar, setColor }) =
       const response = await fetch(salesUrl, {
         method: "POST",
         headers: {
-          'Authorization': `Bearer ${apiKey}`,
+          'Authorization': apiKey,
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(payload),

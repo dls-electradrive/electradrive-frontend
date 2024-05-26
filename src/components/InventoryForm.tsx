@@ -58,7 +58,7 @@ const InventoryForm = ({ car }: Props) => {
       const response = await fetch(salesUrl, { // Adjust the URL as necessary
         method: 'POST',
         headers: {
-          'Authorization': `Bearer ${apiKey}`,
+          'Authorization': apiKey,
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(payload),

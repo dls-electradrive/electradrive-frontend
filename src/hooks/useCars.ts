@@ -37,7 +37,6 @@ const useCars = () => {
         }
 
         const data = await response.json();
-        console.log(data);
         setCars(data);
         setIsLoading(false);
       } catch (error) {
