@@ -4,6 +4,7 @@ import styles from '../my-style.module.css';
 import { v4 as uuidv4 } from 'uuid';
 import { useNavigate } from 'react-router-dom';
 const salesUrl = import.meta.env.VITE_BACKEND_SALE_URL
+const apiKey = import.meta.env.VITE_API_KEY;
 
 interface BuildFormProps {
   car: string;
@@ -61,6 +62,7 @@ const BuildForm: React.FC<BuildFormProps> = ({ car, color, setCar, setColor }) =
       const response = await fetch(salesUrl, {
         method: "POST",
         headers: {
+          'Authorization': `Bearer ${apiKey}`,
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(payload),
