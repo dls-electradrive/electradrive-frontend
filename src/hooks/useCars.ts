@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-const carUrl = import.meta.env.VITE_APP_BACKEND_GET_CAR_URL
+const carUrl = "http://host.docker.internal:8080/api/cars/"
 
 export interface Car {
   id: number;
