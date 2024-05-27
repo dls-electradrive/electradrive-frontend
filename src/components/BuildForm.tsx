@@ -3,7 +3,7 @@ import { FormControl, FormLabel, Heading, Input, Select, Button, useToast, Cente
 import styles from '../my-style.module.css';
 import { v4 as uuidv4 } from 'uuid';
 import { useNavigate } from 'react-router-dom';
-const salesUrl = import.meta.env.VITE_BACKEND_SALE_URL
+const salesUrl = import.meta.env.VITE_BACKEND_SALE_URL;
 const apiKey = import.meta.env.VITE_API_KEY;
 
 interface BuildFormProps {
@@ -20,9 +20,9 @@ const BuildForm: React.FC<BuildFormProps> = ({ car, color, setCar, setColor }) =
   const [email, setEmail] = useState("");
   const [address, setAddress] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+  const [customerUUID] = useState(uuidv4);  // UUID generated once
   const toast = useToast();
   const navigate = useNavigate(); 
-
 
   const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
@@ -40,12 +40,11 @@ const BuildForm: React.FC<BuildFormProps> = ({ car, color, setCar, setColor }) =
     }
 
     setIsLoading(true);
-  
-    const customerUUID = uuidv4();
+
     const carUUID = uuidv4();
 
     const payload = {
-        customerId: customerUUID, // Assign UUID to the customer
+        customerId: customerUUID, // Use the same UUID for each submit attempt
         customerName: name,
         customerEmail: email,
         customerAddress: address,
@@ -57,41 +56,41 @@ const BuildForm: React.FC<BuildFormProps> = ({ car, color, setCar, setColor }) =
     };
     console.log(payload);
 
-    try {
-      console.log("Tries to send to backend via buildform");
-      const response = await fetch(salesUrl, {
-        method: "POST",
-        headers: {
-          'Authorization': apiKey,
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(payload),
-      });
+    
+    setTimeout(async () => {// Artificial delay to simulate network latency // KUN TIL TESTING!
+        try {
+            console.log("Tries to send to backend via buildform");
+            const response = await fetch(salesUrl, {
+                method: "POST",
+                headers: {
+                    'Authorization': apiKey,
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(payload),
+            });
 
-
-
-      if (response.ok) {
-        // If the HTTP status code is 2xx, it was successful
-        // Redirection after a successful order
-        navigate('/order-confirmation', { state: { orderDetails: payload } });
-
-      } else {
-        // If the HTTP status code is not 2xx, throw an error
-        throw new Error('Network response was not ok.');
-      }
-    } catch (error) {
-      console.error("Failed to send to backend via buildform");
-      console.error(error);
-      toast({
-        title: "An error occurred.",
-        description: "Unable to submit your information.",
-        status: "error",
-        duration: 5000,
-        isClosable: true,
-      });
-    } finally {
-      setIsLoading(false);
-    }
+            if (response.ok) {
+                // If the HTTP status code is 2xx, it was successful
+                // Redirection after a successful order
+                navigate('/order-confirmation', { state: { orderDetails: payload } });
+            } else {
+                // If the HTTP status code is not 2xx, throw an error
+                throw new Error('Network response was not ok.');
+            }
+        } catch (error) {
+            console.error("Failed to send to backend via buildform");
+            console.error(error);
+            toast({
+                title: "An error occurred.",
+                description: "Unable to submit your information.",
+                status: "error",
+                duration: 5000,
+                isClosable: true,
+            });
+        } finally {
+            setIsLoading(false);
+        }
+    }, 3000); // 3000 milliseconds = 3 seconds delay // Artificial delay to simulate network latency // KUN TIL TESTING!
   };
 
   return (
@@ -139,7 +138,8 @@ const BuildForm: React.FC<BuildFormProps> = ({ car, color, setCar, setColor }) =
         <FormLabel textAlign="center">Delivery address</FormLabel>
         <Input type='address' onChange={e => setAddress(e.target.value)} isRequired />
         <Center>
-        <Button type="submit" isLoading={isLoading}>Submit</Button>
+        <Button type="submit" //isLoading={isLoading}
+        >Submit</Button>
         </Center>
       </FormControl>
       
