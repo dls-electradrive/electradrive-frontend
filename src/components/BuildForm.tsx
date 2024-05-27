@@ -3,7 +3,7 @@ import { FormControl, FormLabel, Heading, Input, Select, Button, useToast, Cente
 import styles from '../my-style.module.css';
 import { v4 as uuidv4 } from 'uuid';
 import { useNavigate } from 'react-router-dom';
-const salesUrl = import.meta.env.VITE_BACKEND_SALE_URL
+const salesUrl = "http://localhost:8080/api/sales/submit"
 
 interface BuildFormProps {
   car: string;

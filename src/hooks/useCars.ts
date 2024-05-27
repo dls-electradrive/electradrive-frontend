@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-const carUrl = "http://host.docker.internal:8080/api/cars/"
+const carUrl = "http://localhost:8080/api/cars/"
 
 export interface Car {
   id: number;
