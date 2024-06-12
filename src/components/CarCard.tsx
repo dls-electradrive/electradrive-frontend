@@ -29,9 +29,9 @@ const CarCard = ({ car }: Props) => {
         <Stack mt='6' spacing='3'>
           <Heading fontSize="2xl">{car.name}</Heading>
           <Text>
-            This sofa is perfect for modern tropical spaces, baroque inspired
+            This car is perfect for modern tropical roads, baroque inspired
             spaces, earthy toned spaces and for people who love a chic design with a
-            sprinkle of vintage design.
+            sprinkle of vintage feel.
           </Text>
         </Stack>
       </CardBody>
