@@ -3,8 +3,6 @@ import { FormControl, FormLabel, Heading, Input, Select, Button, useToast, Cente
 import styles from '../my-style.module.css';
 import { v4 as uuidv4 } from 'uuid';
 import { useNavigate } from 'react-router-dom';
-const salesUrl = import.meta.env.VITE_BACKEND_SALE_URL;
-const apiKey = import.meta.env.VITE_API_KEY;
 
 interface BuildFormProps {
   car: string;
@@ -60,10 +58,10 @@ const BuildForm: React.FC<BuildFormProps> = ({ car, color, setCar, setColor }) =
     setTimeout(async () => {// Artificial delay to simulate network latency // KUN TIL TESTING!
         try {
             console.log("Tries to send to backend via buildform");
-            const response = await fetch(salesUrl, {
+            const response = await fetch("https://electradrive-backend.azurewebsites.net/api/sales/submit", {
                 method: "POST",
                 headers: {
-                    'Authorization': apiKey,
+                    'Authorization': "PgI0SiQTB0F2RwTJkyVAOLVzUkSE95007OxtQSSaD0I",
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify(payload),

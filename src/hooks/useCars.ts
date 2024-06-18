@@ -1,8 +1,5 @@
 import { useState, useEffect } from "react";
 
-const carUrl = import.meta.env.VITE_APP_BACKEND_GET_CAR_URL;
-const apiKey = import.meta.env.VITE_API_KEY;
-
 export interface Car {
   id: number;
   name: string;
@@ -22,12 +19,12 @@ const useCars = () => {
       try {
         console.error("Trying to fetch data from backend via useCars.ts");
         setIsLoading(true);
-        console.log(carUrl);
 
-        const response = await fetch(carUrl, {
+
+        const response = await fetch("https://electradrive-backend.azurewebsites.net/api/cars/", {
           method: "GET",
           headers: {
-            'Authorization': apiKey,
+            'Authorization': "PgI0SiQTB0F2RwTJkyVAOLVzUkSE95007OxtQSSaD0I",
             'Content-Type': 'application/json',
           },
         });

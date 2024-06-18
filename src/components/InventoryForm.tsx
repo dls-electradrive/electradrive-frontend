@@ -4,8 +4,6 @@ import styles from '../my-style.module.css';
 import { Car } from "../hooks/useCars"; // adjust the path as necessary
 import { v4 as uuidv4 } from 'uuid';
 import { useNavigate } from 'react-router-dom';
-const salesUrl = import.meta.env.VITE_BACKEND_SALE_URL
-const apiKey = import.meta.env.VITE_API_KEY;
 
 interface Props {
   car: Car;
@@ -54,11 +52,10 @@ const InventoryForm = ({ car }: Props) => {
     
     try {
       console.log("Tries to send to backend via inventoryform");
-      console.log(apiKey);
-      const response = await fetch(salesUrl, { // Adjust the URL as necessary
+      const response = await fetch("https://electradrive-backend.azurewebsites.net/api/sales/submit", { // Adjust the URL as necessary
         method: 'POST',
         headers: {
-          'Authorization': apiKey,
+          'Authorization': "PgI0SiQTB0F2RwTJkyVAOLVzUkSE95007OxtQSSaD0I",
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(payload),
