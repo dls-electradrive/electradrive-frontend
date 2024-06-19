@@ -55,7 +55,7 @@ const BuildForm: React.FC<BuildFormProps> = ({ car, color, setCar, setColor }) =
     console.log(payload);
 
     
-    setTimeout(async () => {// Artificial delay to simulate network latency // KUN TIL TESTING!
+    
         try {
             console.log("Tries to send to backend via buildform");
             const response = await fetch("https://electradrive-backend.azurewebsites.net/api/sales/submit", {
@@ -88,8 +88,7 @@ const BuildForm: React.FC<BuildFormProps> = ({ car, color, setCar, setColor }) =
         } finally {
             setIsLoading(false);
         }
-    }, 3000); // 3000 milliseconds = 3 seconds delay // Artificial delay to simulate network latency // KUN TIL TESTING!
-  };
+      };
 
   return (
     <form onSubmit={handleSubmit}>
